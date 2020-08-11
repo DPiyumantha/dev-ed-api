@@ -20,5 +20,7 @@ app.use(express.json())
 //Route middleqqares
 app.use('/api/user', authRoute);
 app.use('/api/posts', postsRoute);
-
-app.listen(process.env.PORT || 3000, ()=>console.log('Server up and running!'));
+app.get('/', (req, res)=>{
+    res.send('Hi')
+})
+app.listen( 3000, ()=>console.log('Server up and running!'));
