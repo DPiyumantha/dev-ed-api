@@ -23,4 +23,4 @@ app.use('/api/posts', postsRoute);
 app.get('/', (req, res)=>{
     res.send('Hi')
 })
-app.listen( 3000, ()=>console.log('Server up and running!'));
+app.listen(process.env.PORT || 3000, ()=>console.log('Server up and running!'));
